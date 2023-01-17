@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>pc</title>
+		<!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.css"> -->
+		<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				background-color: #000000;
+			}
+
+			#box {
+				position: relative;
+				margin: 4.375rem auto;
+				width: 28.125rem;
+				height: 28.125rem;
+			}
+
+			.btn {
+				position: absolute;
+				top: 80%;
+				left: 20%;
+				width: 12.5rem;
+				height: 9.25rem;
+				overflow: hidden;
+			}
+
+			.btn img {
+				width: 24.5rem;
+				height: 16.25rem;
+				margin-left: -76%;
+				margin-top: -38%;
+			}
+
+			.loos {
+				position: absolute;
+				width: 1.3125rem;
+				height: 10.5rem;
+				top: 50%;
+				left: 15%;
+				transform: rotate(55deg);
+				background-color: #fff;
+				border-radius: 44%;
+			}
+
+			.base {
+				position: absolute;
+				top: -5%;
+				left: -39%;
+				width: 2.1875rem;
+				height: 2.1875rem;
+				background-color: #fff;
+				border-radius: 54%;
+			}
+
+			.be_h {
+				position: absolute;
+				top: 89%;
+				left: 3%;
+				width: 1.1875rem;
+				height: 2.1875rem;
+				background-color: #fff;
+				border-radius: 50%;
+			}
+
+			.h_1,
+			.h_2,
+			.h_3 {
+				position: absolute;
+				top: 67%;
+				left: -9%;
+				width: 1.5rem;
+				height: 1rem;
+				background-color: #fff;
+				border-radius: 52%;
+			}
+
+			.h_2 {
+				top: 51%;
+			}
+
+			.h_3 {
+				top: 33%;
+			}
+
+			#cont {
+				position: absolute;
+				top: 58%;
+				left: 40%;
+				width: 240px;
+				height: 50px;
+				line-height: 50px;
+				font-size: 35px;
+				color: #000000;
+				font-weight: 700;
+				text-align: center;
+				background-color: azure;
+			}
+
+			.left,
+			.right {
+				display: none;
+				float: left;
+				margin-top: -25rem;
+				margin-left: 2%;
+				width: 31.25rem;
+				height: 17.5rem;
+				overflow: hidden;
+			}
+
+			.right {
+				margin-top: -25rem;
+				margin-left: 65%;
+			}
+
+			.left img,
+			.right img {
+				width: 31.25rem;
+				height: 17.5rem;
+				animation: change 1s 1 linear;
+			}
+
+			@keyframes change {
+				0% {
+					opacity: 1;
+				}
+
+				25% {
+					opacity: 0.7;
+					transform: scale(1);
+					transform: rotate(90deg);
+				}
+
+				50% {
+					opacity: 0.5;
+					transform: scale(2);
+					transform: rotate(180deg);
+				}
+
+				75% {
+					opacity: 0.2;
+					transform: scale(3);
+					transform: rotate(270deg);
+				}
+
+				100% {
+					opacity: 0.1;
+					transform: rotate(360deg);
+				}
+			}
+
+			.btn-primary,
+			.btn-secondary {
+				position: absolute;
+				left: 15%;
+				top: 45%;
+				width: 10rem;
+				height: 5rem;
+				line-height: 5rem;
+				text-align: center;
+				color: #000000;
+				background-color: #fff;
+				border-radius: 15px;
+			}
+
+			.btn-secondary {
+				left: 72%;
+				top: 45%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="btn-primary">
+			<a href="pc.html">PC端</a>
+		</div>
+		<div class="btn-secondary">
+			<a href="iphone.html">iPhone端</a>
+		</div>
+		<div id="box">
+			<div class="loos">
+				<div class="base"></div>
+				<div class="be_h"></div>
+				<!-- <div class="h_1"></div>
+				<div class="h_2"></div>
+				<div class="h_3"></div> -->
+			</div>
+			<div class="btn">
+				<img src="https://img1.baidu.com/it/u=1821366646,213158675&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=500" />
+			</div>
+		</div>
+		<div id="cont"></div>
+		<audio src="https://img02.tuke88.com/newpreview_music/09/00/71/5c89465032f0c47285.mp3">
+			当前浏览器不支持audio
+		</audio>
+		<div class="left">
+			<img src="https://img2.baidu.com/it/u=76904506,675348918&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=281" id="left" />;
+		</div>
+		<div class="right">
+			<img src="https://img2.baidu.com/it/u=76904506,675348918&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=281" id="right" />;
+		</div>
+		<!-- 		<audio src="https://img02.tuke88.com/newpreview_music/09/00/54/5c893268629b716248.mp3" >
+			当前浏览器不支持audio
+		</audio> -->
+		<script type="text/javascript">
+			var btn = document.querySelector('.btn');
+			var loos = document.querySelector('.loos');
+			var cont = document.querySelector('#cont');
+			var conts = 0;
+			var open1 = document.querySelector('audio');
+			var left = document.querySelector('.left');
+			var right = document.querySelector('.right');
+			var l = document.querySelector('#left');
+			var r = document.querySelector('#right');
+			var see = document.body.offsetWidth;
+			var isFHD = see > 790 ? true : false;
+			// match();//正则表达式的知识点
+			if((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+			 window.location.href = "iphone.html"; //手机
+			} else {
+			 window.location.href = "pc.html"; //电脑
+			}
+			(function() {
+
+				if (isFHD) {
+					location.href = "pc.html";
+					location.assign('pc.html');
+				} else {
+					location.href = "iphone.html";
+					location.assign('iphone.html');
+				}
+			})
+			btn.onmousedown = function() {
+				loos.style.transform = 'rotate(119deg)';
+				conts++;
+				open1.play();
+
+				cont.innerHTML = '功德数:' + conts;
+			}
+			btn.onmouseup = function() {
+				loos.style.transform = 'rotate(55deg)';
+				open1.play();
+			}
+			btn.onclick = function() {
+				if (conts % 10 == 0) {
+					left.style.display = 'block';
+					right.style.display = 'block';
+				} else {
+					left.style.display = 'none';
+					right.style.display = 'none';
+
+				}
+			}
+		</script>
+
+	</body>
+</html>
